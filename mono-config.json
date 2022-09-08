@@ -57,7 +57,7 @@
     },
     {
       "behavior": "assembly",
-      "name": "System.Runtime.Intrinsics.dll"
+      "name": "System.Threading.Channels.dll"
     },
     {
       "virtualPath": "runtimeconfig.bin",
