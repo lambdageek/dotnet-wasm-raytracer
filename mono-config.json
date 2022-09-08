@@ -57,6 +57,10 @@
     },
     {
       "behavior": "assembly",
+      "name": "System.Runtime.Intrinsics.dll"
+    },
+    {
+      "behavior": "assembly",
       "name": "System.Threading.Channels.dll"
     },
     {
