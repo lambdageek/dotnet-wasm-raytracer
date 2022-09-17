@@ -41,12 +41,29 @@ const canvas = document.getElementById("out");
 const outText = document.getElementById("outText");
 const btnRender = document.getElementById("btnRender");
 
+let running = false;
+
+async function animate() {
+    if (running) {
+        //drawWaitingForRendering(canvas);
+        //await delay(1);
+        await exports.MainJS.OnClick();
+        requestAnimationFrame(animate);
+    }
+}
+
 globalThis.onClick = async function () {
-    btnRender.disabled = true;
-    drawWaitingForRendering(canvas);
-    await delay(10);
-    await exports.MainJS.OnClick();
-    btnRender.disabled = false;
+    if (!running) {
+        running = true;
+        //btnRender.disabled = true;
+        btnRender.innerText = "Stop"
+        drawWaitingForRendering(canvas);
+        requestAnimationFrame(animate);
+        //btnRender.disabled = false;
+    } else {
+        btnRender.innerText = "Render";
+        running = false;
+    }
 }
 
 await dotnet.run();
