@@ -9,10 +9,6 @@
     },
     {
       "behavior": "assembly",
-      "name": "System.Collections.dll"
-    },
-    {
-      "behavior": "assembly",
       "name": "System.ComponentModel.Primitives.dll"
     },
     {
@@ -33,10 +29,6 @@
     },
     {
       "behavior": "assembly",
-      "name": "System.Numerics.Vectors.dll"
-    },
-    {
-      "behavior": "assembly",
       "name": "System.ObjectModel.dll"
     },
     {
@@ -49,15 +41,7 @@
     },
     {
       "behavior": "assembly",
-      "name": "System.Runtime.dll"
-    },
-    {
-      "behavior": "assembly",
       "name": "System.Runtime.InteropServices.JavaScript.dll"
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.Runtime.Intrinsics.dll"
     },
     {
       "behavior": "assembly",
