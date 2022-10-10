@@ -48,6 +48,7 @@ async function animate() {
         //drawWaitingForRendering(canvas);
         //await delay(1);
         await exports.MainJS.OnClick();
+        await delay(10);
         requestAnimationFrame(animate);
     }
 }
