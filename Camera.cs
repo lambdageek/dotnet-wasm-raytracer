@@ -60,7 +60,8 @@ namespace RayTracer
 
         public void LookAt(Vector128<float> target)
         {
-            this.forward = (target - this.Position).Normalize();
+            var forward = target - this.Position;
+            this.forward = forward.Normalize();
             this.right = Util.CrossProduct(Util.UpVector, forward).Normalize();
             this.up = -Util.CrossProduct(right, forward).Normalize();
             RecalculateFieldOfView();

@@ -74,7 +74,7 @@ public partial class MainJS
 
         var avgTime = totalRenderTime / totalFrames;
 
-        text = $"Rendering finished in {elapsedMs} ms; average time: {avgTime} ms";
+        text = $"Rendering finished in {elapsedMs:F2} ms; average time: {avgTime:F2} ms";
 #if !USE_THREADS
         Console.WriteLine(text);
 #endif
@@ -88,7 +88,9 @@ public partial class MainJS
         sceneEnvironment.worldClockNow += 0.1;
         sceneEnvironment.YellowSphere.Position = RepositionYellowSphere (sceneEnvironment.YellowSphere.Position, sceneEnvironment.worldClockNow);
         sceneEnvironment.Camera.Position = RepositionCamera(sceneEnvironment.Camera.Position, sceneEnvironment.worldClockNow);
-        sceneEnvironment.Camera.LookAt(Vector128.Create(0f, -.3f, 1.0f, 0));
+        var initialCameraPosition = Vector128.Create(0f, 2f, -2f, 0);
+        var cameraTarget = Vector128.Create(0, -.25f, 1f, 0) + initialCameraPosition;
+        sceneEnvironment.Camera.LookAt(cameraTarget);
     }
 
     public static Vector128<float> RepositionYellowSphere (Vector128<float> position, double worldClockNow)
@@ -100,9 +102,19 @@ public partial class MainJS
 
     public static Vector128<float> RepositionCamera(Vector128<float> position, double worldClockNow)
     {
-        //Vector128<float> initialPosition = Vector128.Create(0f, 2f, -2f, 0);
-        double timeParam = Math.PI * (worldClockNow / 4.0);
-        Vector128<float> newPosition = Vector128.Create(0f + (float)(20.0 * Math.Sin(timeParam)), 2f, 18.0f + (float)(20.0 * Math.Cos(Math.PI + timeParam)), 0);
-        return newPosition;
+        if (worldClockNow < 0.5)
+        {
+            // move the camera back a bit
+            float newZ = -2.0f + (float)(-2.0 * worldClockNow / 0.5);
+            return Vector128.WithElement(position, 2, newZ);
+        }
+        else
+        {
+            // and then rotate around the main scene
+            double localClock = worldClockNow - 0.5;
+            double timeParam = Math.PI * (localClock / 4.0);
+            Vector128<float> newPosition = Vector128.Create(0f + (float)(24.0 * Math.Sin(timeParam)), 2f, 20.0f + (float)(24.0 * Math.Cos(Math.PI + timeParam)), 0);
+            return newPosition;
+        }
     }
 }
