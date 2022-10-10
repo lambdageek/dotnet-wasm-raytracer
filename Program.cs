@@ -12,6 +12,7 @@ public partial class MainJS
         public byte[] rgbaRenderBuffer;
         public Scene Scene;
         public RayTracer.Objects.DrawableSceneObject YellowSphere;
+        public RayTracer.Camera Camera;
         public double worldClockNow;
     }
 
@@ -40,6 +41,7 @@ public partial class MainJS
         sceneEnvironment.YellowSphere = sceneEnvironment.Scene.DrawableObjects[2];
         sceneEnvironment.rgbaRenderBuffer = new byte[sceneWidth * sceneHeight * 4];
         sceneEnvironment.worldClockNow = 0.0;
+        sceneEnvironment.Camera = sceneEnvironment.Scene.Camera;
         return sceneEnvironment.rgbaRenderBuffer;
     }
 
@@ -50,6 +52,9 @@ public partial class MainJS
     [JSImport("setOutText", "main.js")]
     internal static partial void SetOutText(string text);
 
+    static int totalFrames = 0;
+    static double totalRenderTime = 0.0;
+
     [JSExport]
     [return: JSMarshalAs<JSType.Promise<JSType.Void>>]
     internal static async Task OnClick(){
@@ -57,13 +62,19 @@ public partial class MainJS
         string text;
         text = "Rendering started";
 #if !USE_THREADS
-        Console.WriteLine(text);
+        //Console.WriteLine(text);
 #endif
-        SetOutText(text);
+        //SetOutText(text);
 
         await sceneEnvironment.Scene.Camera.RenderScene(sceneEnvironment.Scene, sceneEnvironment.rgbaRenderBuffer, sceneEnvironment.Width, sceneEnvironment.Height);
 
-        text = $"Rendering finished in {(DateTime.UtcNow - now).TotalMilliseconds} ms";
+        var elapsedMs = (DateTime.UtcNow - now).TotalMilliseconds;
+        totalFrames++;
+        totalRenderTime += elapsedMs;
+
+        var avgTime = totalRenderTime / totalFrames;
+
+        text = $"Rendering finished in {elapsedMs} ms; average time: {avgTime} ms";
 #if !USE_THREADS
         Console.WriteLine(text);
 #endif
@@ -76,6 +87,8 @@ public partial class MainJS
     {
         sceneEnvironment.worldClockNow += 0.1;
         sceneEnvironment.YellowSphere.Position = RepositionYellowSphere (sceneEnvironment.YellowSphere.Position, sceneEnvironment.worldClockNow);
+        sceneEnvironment.Camera.Position = RepositionCamera(sceneEnvironment.Camera.Position, sceneEnvironment.worldClockNow);
+        sceneEnvironment.Camera.LookAt(Vector128.Create(0f, -.3f, 1.0f, 0));
     }
 
     public static Vector128<float> RepositionYellowSphere (Vector128<float> position, double worldClockNow)
@@ -83,5 +96,13 @@ public partial class MainJS
         // wiggle around from side to side
         float newX = -5.0f + (float)(5.0 * Math.Sin(Math.PI * (worldClockNow / 0.5)));
         return Vector128.WithElement(position, 0, newX);
+    }
+
+    public static Vector128<float> RepositionCamera(Vector128<float> position, double worldClockNow)
+    {
+        //Vector128<float> initialPosition = Vector128.Create(0f, 2f, -2f, 0);
+        double timeParam = Math.PI * (worldClockNow / 4.0);
+        Vector128<float> newPosition = Vector128.Create(0f + (float)(20.0 * Math.Sin(timeParam)), 2f, 18.0f + (float)(20.0 * Math.Cos(Math.PI + timeParam)), 0);
+        return newPosition;
     }
 }

@@ -58,6 +58,14 @@ namespace RayTracer
             this.screenPosition = this.Position + forward * Vector128.Create(screenDistance);
         }
 
+        public void LookAt(Vector128<float> target)
+        {
+            this.forward = (target - this.Position).Normalize();
+            this.right = Util.CrossProduct(Util.UpVector, forward).Normalize();
+            this.up = -Util.CrossProduct(right, forward).Normalize();
+            RecalculateFieldOfView();
+        }
+
         private Ray GetRay(float viewPortX, float viewPortY)
         {
             var rayWorldPosition = screenPosition + ((Vector128.Create(viewPortX) * right) + (Vector128.Create(viewPortY) * up * Vector128.Create(yRatio)));
