@@ -32,6 +32,9 @@ public partial class MainJS
     }
 
     [JSExport]
+    internal static string GetFrameworkVersion() => System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
+
+    [JSExport]
     [return: JSMarshalAs<JSType.MemoryView>]
     internal static ArraySegment<byte> PrepareToRender(int sceneWidth, int sceneHeight)
     {

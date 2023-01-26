@@ -40,6 +40,7 @@ const exports = await getAssemblyExports(config.mainAssemblyName);
 const canvas = document.getElementById("out");
 const outText = document.getElementById("outText");
 const btnRender = document.getElementById("btnRender");
+const frameworkVersion = document.getElementById("frameworkVersion");
 
 let running = false;
 
@@ -70,5 +71,6 @@ globalThis.onClick = async function () {
 await dotnet.run();
 const rgbaView = exports.MainJS.PrepareToRender(canvas.width, canvas.height);
 btnRender.disabled = false;
+frameworkVersion.innerText = exports.MainJS.GetFrameworkVersion();
 
 // when done, call rgbaView.dispose();

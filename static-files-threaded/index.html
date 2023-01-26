@@ -4,7 +4,7 @@
 <html>
 
 <head>
-  <title>Raytracer demo on Net7 wasm</title>
+  <title>Raytracer demo on wasm</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="modulepreload" href="./main.js" />
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <h1>Threaded raytracer demo on Net7 wasm</h1>
+  <h1>Threaded raytracer demo on <span id="frameworkVersion"></span> wasm</h1>
   <button id="btnRender" onclick="globalThis.onClick()" disabled="true">Render</button>
   <br /><br />
   <canvas id="out" width="640" height="480" style="border: dotted;"></canvas>
