@@ -9,8 +9,7 @@ namespace RayTracer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static public float DotR(this Vector128<float> left, Vector128<float> right)
         {
-            var vm = left * right;
-            return vm.X() + vm.Y() + vm.Z();
+            return Vector128.Dot(left, right);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
