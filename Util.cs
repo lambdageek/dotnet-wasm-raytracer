@@ -55,21 +55,24 @@ namespace RayTracer
 
         public static Vector128<float> CrossProduct(Vector128<float> left, Vector128<float> right)
         {
-            //return Vector128.Create(
-            //    left.Y() * right.Z() - left.Z() * right.Y(),
-            //    left.Z() * right.X() - left.X() * right.Z(),
-            //    left.X() * right.Y() - left.Y() * right.X(),
-            //    0);
+#if  NET8_0_OR_GREATER
             // https://geometrian.com/programming/tutorials/cross-product/index.php
             // "Method 5"
-            Vector128<int> shuffleMask0 = Vector128.Create(3, 0, 2, 1);
+            Vector128<int> shuffleMask0 = Vector128.Create(1, 2, 0, 3); //Vector128.Create(3, 0, 2, 1);
             Vector128<float> tmp0 = Vector128.Shuffle(left, shuffleMask0);
-            Vector128<int> shuffleMask1 = Vector128.Create(3, 1, 0, 2);
+            Vector128<int> shuffleMask1 = Vector128.Create(2, 0, 1, 3); //Vector128.Create(3, 1, 0, 2);
             Vector128<float> tmp1 = Vector128.Shuffle(right, shuffleMask1);
             Vector128<float> tmp2 = tmp0 * right;
             Vector128<float> tmp3 = tmp0 * tmp1;
             Vector128<float> tmp4 = Vector128.Shuffle(tmp2, shuffleMask0);
             return tmp3 - tmp4;
+#else
+            return Vector128.Create(
+                left.Y() * right.Z() - left.Z() * right.Y(),
+                left.Z() * right.X() - left.X() * right.Z(),
+                left.X() * right.Y() - left.Y() * right.X(),
+                0);
+#endif  
         }
 
         //public static float Magnitude(this Vector128<float> v)

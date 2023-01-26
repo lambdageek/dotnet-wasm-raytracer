@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
 		<RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
 		<WasmMainJSPath>main.js</WasmMainJSPath>
 		<OutputType>Exe</OutputType>
@@ -10,6 +10,7 @@
 		<TrimMode>link</TrimMode>
 		<RunAOTCompilation>true</RunAOTCompilation>
 		<WasmEnableSIMD>true</WasmEnableSIMD>
+		<WasmEnableExceptionHandling>true</WasmEnableExceptionHandling>
 	</PropertyGroup>
 	<ItemGroup>
 		<WasmExtraFilesToDeploy Include="main.js" />
