@@ -7,7 +7,7 @@ Original code at: https://github.com/microsoft/dotnet-samples/tree/master/System
 
 ## Single threaded
 
-With .NET 7 Release Candidate 1 or later do:
+With .NET 7 or later do:
 
 ```
 dotnet workload install wasm-tools
@@ -17,12 +17,12 @@ dotnet serve --directory bin/Release/net7.0/browser-wasm/AppBundle/
 
 ## Multi-threaded
 
-With .NET 7 Release Candidate 2 or later do:
+With .NET 7 or with .NET 8 Preview 1 or later do:
 
 ```
 dotnet workload install wasm-experimental
-dotnet publish -c Release -p:WasmEnableThreads=true
-dotnet serve -h "Cross-Origin-Opener-Policy:same-origin" -h "Cross-Origin-Embedder-Policy:require-corp" --directory bin/Release/net7.0/browser-wasm/AppBundle/
+dotnet publish -c Release -p:WasmEnableThreads=true -f net8.0 # or net7.0
+./run-threaded.sh net8.0 # or net7.0
 ```
 
 For publishing we bundle https://github.com/gzuidhof/coi-serviceworker to enable COOP/COEP headers on hosts that don't serve those headers (such as Github Pages).
