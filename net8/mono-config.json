@@ -4,73 +4,91 @@
   "debugLevel": 0,
   "assets": [
     {
-      "behavior": "assembly",
-      "name": "RayTracer.dll"
+      "behavior": "dotnetwasm",
+      "name": "dotnet.wasm",
+      "hash": "sha256-CrvCCDE3UbIjYwxPjHrfpi3dtiI1tdRc9Rxsgid0LEQ="
+    },
+    {
+      "behavior": "js-module-threads",
+      "name": "dotnet.worker.js",
+      "hash": "sha256-sQeayS4S/J8\u002BAK2sPQEan6Spwd4ENHZVhQbdX0Apro4="
     },
     {
       "behavior": "assembly",
-      "name": "System.ComponentModel.Primitives.dll"
+      "name": "RayTracer.dll",
+      "hash": "sha256-0c5c4NVoamsFX59u/FGUfoDu9IkwaitjTCDurrnpXb4="
     },
     {
       "behavior": "assembly",
-      "name": "System.ComponentModel.TypeConverter.dll"
+      "name": "System.ComponentModel.Primitives.dll",
+      "hash": "sha256-WcShiEcWlBtybrqGM7dz6nq4KlIPAN6CULCqcOssiL0="
     },
     {
       "behavior": "assembly",
-      "name": "System.Console.dll"
+      "name": "System.ComponentModel.TypeConverter.dll",
+      "hash": "sha256-vYJtVvbO9\u002Bmp1yDagqTotUzo9RGu\u002BsfplepOb2U07yo="
     },
     {
       "behavior": "assembly",
-      "name": "System.Drawing.dll"
+      "name": "System.Console.dll",
+      "hash": "sha256-Tsr2MgnSaSUy5RVFZR9vlJznv6IBVswwClEgwhW77VI="
     },
     {
       "behavior": "assembly",
-      "name": "System.Drawing.Primitives.dll"
+      "name": "System.Drawing.dll",
+      "hash": "sha256-up67bUhX/nGUSDb0IufCPNhca5BmOYQEWKvhXonw7es="
     },
     {
       "behavior": "assembly",
-      "name": "System.ObjectModel.dll"
+      "name": "System.Drawing.Primitives.dll",
+      "hash": "sha256-2JI7Mv4mtfUZiXsrLiLYsgSjwnPnLIgevRz1BFqx9gg="
     },
     {
       "behavior": "assembly",
-      "name": "System.Private.CoreLib.dll"
+      "name": "System.ObjectModel.dll",
+      "hash": "sha256-WXHXeAIJWNbi0yiCQLksW6q8\u002B6lx/7YSb85osrr1I0M="
     },
     {
       "behavior": "assembly",
-      "name": "System.Runtime.InteropServices.JavaScript.dll"
+      "name": "System.Private.CoreLib.dll",
+      "hash": "sha256-rAs/JMhkGtTA7XiHScfvW9wQeD75ktdHhKRI9W\u002BKbOY="
     },
     {
       "behavior": "assembly",
-      "name": "System.Threading.Channels.dll"
+      "name": "System.Runtime.InteropServices.JavaScript.dll",
+      "hash": "sha256-KfbwpW9kGM3oovEJViSIu8GYGWPvLKw4h3g4mdjvqCI="
     },
     {
       "behavior": "assembly",
-      "name": "aot-instances.dll"
+      "name": "System.Threading.Channels.dll",
+      "hash": "sha256-df8SObzos1JjAZyRJ1dh/mVm4cdiypYsdoYw\u002BbaCWmc="
     },
     {
       "virtualPath": "runtimeconfig.bin",
       "behavior": "vfs",
-      "name": "supportFiles/0_runtimeconfig.bin"
+      "name": "supportFiles/0_runtimeconfig.bin",
+      "hash": "sha256-8bhJqueQ2ILeFYnfqwVEEhoLZ15Qwks/Ewv7UcsZ5V0="
     },
     {
       "loadRemote": false,
       "behavior": "icu",
-      "name": "icudt.dat"
+      "name": "icudt_CJK.dat",
+      "hash": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk="
     },
     {
-      "virtualPath": "/usr/share/zoneinfo/",
-      "behavior": "vfs",
-      "name": "dotnet.timezones.blat"
+      "loadRemote": false,
+      "behavior": "icu",
+      "name": "icudt_EFIGS.dat",
+      "hash": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc="
     },
     {
-      "behavior": "dotnetwasm",
-      "name": "dotnet.wasm"
-    },
-    {
-      "behavior": "js-module-threads",
-      "name": "dotnet.worker.js"
+      "loadRemote": false,
+      "behavior": "icu",
+      "name": "icudt_no_CJK.dat",
+      "hash": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q\u002B0Nfs="
     }
   ],
   "remoteSources": [],
-  "pthreadPoolSize": -1
+  "globalizationMode": "icu",
+  "assetsHash": "sha256-kfVTMkkjFc4ypCqkgrcFWGP/g60V7aLFTqdoHfZvYvY="
 }
