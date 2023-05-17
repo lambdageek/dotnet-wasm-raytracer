@@ -6,68 +6,68 @@
     {
       "behavior": "dotnetwasm",
       "name": "dotnet.wasm",
-      "hash": "sha256-CrvCCDE3UbIjYwxPjHrfpi3dtiI1tdRc9Rxsgid0LEQ="
+      "hash": "sha256-sFLKzfZTyKVjjJazc9T3awPc2AcvGJ3j1Bs5IK8Ip2Y="
     },
     {
       "behavior": "js-module-threads",
       "name": "dotnet.worker.js",
-      "hash": "sha256-sQeayS4S/J8\u002BAK2sPQEan6Spwd4ENHZVhQbdX0Apro4="
+      "hash": "sha256-9FBxCwcj1SOhhfS3y\u002Bk39MPLhkytY9Z/8VCdH9AItcY="
     },
     {
       "behavior": "assembly",
-      "name": "RayTracer.dll",
-      "hash": "sha256-0c5c4NVoamsFX59u/FGUfoDu9IkwaitjTCDurrnpXb4="
+      "name": "RayTracer.webcil",
+      "hash": "sha256-Trx/mOn68rfMAUG0heu3lcXJkp5bWSXuN\u002BaSr9vYOL4="
     },
     {
       "behavior": "assembly",
-      "name": "System.ComponentModel.Primitives.dll",
-      "hash": "sha256-WcShiEcWlBtybrqGM7dz6nq4KlIPAN6CULCqcOssiL0="
+      "name": "System.ComponentModel.Primitives.webcil",
+      "hash": "sha256-n0miGYpAj/FYI8BDr1pXAwTwyMX/1bZY5Jc262WPlVw="
     },
     {
       "behavior": "assembly",
-      "name": "System.ComponentModel.TypeConverter.dll",
-      "hash": "sha256-vYJtVvbO9\u002Bmp1yDagqTotUzo9RGu\u002BsfplepOb2U07yo="
+      "name": "System.ComponentModel.TypeConverter.webcil",
+      "hash": "sha256-OstQvKZCes278CZM9PDUMC3CXGOuTDT74Kivv65rNRI="
     },
     {
       "behavior": "assembly",
-      "name": "System.Console.dll",
-      "hash": "sha256-Tsr2MgnSaSUy5RVFZR9vlJznv6IBVswwClEgwhW77VI="
+      "name": "System.Console.webcil",
+      "hash": "sha256-QDif218DJ9jVv9Xc6H\u002BnljpF1jyLPP9YDPvOoSd7E\u002BA="
     },
     {
       "behavior": "assembly",
-      "name": "System.Drawing.dll",
-      "hash": "sha256-up67bUhX/nGUSDb0IufCPNhca5BmOYQEWKvhXonw7es="
+      "name": "System.Drawing.webcil",
+      "hash": "sha256-n1wibkKcLATGnbYu34y09SoPZCotJamyIW2reZdJcVU="
     },
     {
       "behavior": "assembly",
-      "name": "System.Drawing.Primitives.dll",
-      "hash": "sha256-2JI7Mv4mtfUZiXsrLiLYsgSjwnPnLIgevRz1BFqx9gg="
+      "name": "System.Drawing.Primitives.webcil",
+      "hash": "sha256-yrXkQ\u002BoYzagz/U0L0YyCk6Ig75yC\u002BEPqMYQx8jzhEXo="
     },
     {
       "behavior": "assembly",
-      "name": "System.ObjectModel.dll",
-      "hash": "sha256-WXHXeAIJWNbi0yiCQLksW6q8\u002B6lx/7YSb85osrr1I0M="
+      "name": "System.ObjectModel.webcil",
+      "hash": "sha256-j3tlh461WA8FsVdvtUsd4t\u002BedAvgltpCsrapfyhQTsg="
     },
     {
       "behavior": "assembly",
-      "name": "System.Private.CoreLib.dll",
-      "hash": "sha256-rAs/JMhkGtTA7XiHScfvW9wQeD75ktdHhKRI9W\u002BKbOY="
+      "name": "System.Private.CoreLib.webcil",
+      "hash": "sha256-AcE2KYUvEJeWiEC/Fflm\u002BNTI3xpGbG2fYoBzM/ZvVgc="
     },
     {
       "behavior": "assembly",
-      "name": "System.Runtime.InteropServices.JavaScript.dll",
-      "hash": "sha256-KfbwpW9kGM3oovEJViSIu8GYGWPvLKw4h3g4mdjvqCI="
+      "name": "System.Runtime.InteropServices.JavaScript.webcil",
+      "hash": "sha256-S5ki1s5os/3TjG0POzxuVsBFVTsklW40adWhcOpNDzQ="
     },
     {
       "behavior": "assembly",
-      "name": "System.Threading.Channels.dll",
-      "hash": "sha256-df8SObzos1JjAZyRJ1dh/mVm4cdiypYsdoYw\u002BbaCWmc="
+      "name": "System.Threading.Channels.webcil",
+      "hash": "sha256-pw6/nCxqu3wIM9dgnEdHkz1ctErv9sDEux8LO4r5d2M="
     },
     {
       "virtualPath": "runtimeconfig.bin",
       "behavior": "vfs",
       "name": "supportFiles/0_runtimeconfig.bin",
-      "hash": "sha256-8bhJqueQ2ILeFYnfqwVEEhoLZ15Qwks/Ewv7UcsZ5V0="
+      "hash": "sha256-WOHR9nkKjrzc0Hi3xtw2XImVlGi8sNd7ePNLXD5oYlo="
     },
     {
       "loadRemote": false,
@@ -90,5 +90,5 @@
   ],
   "remoteSources": [],
   "globalizationMode": "icu",
-  "assetsHash": "sha256-kfVTMkkjFc4ypCqkgrcFWGP/g60V7aLFTqdoHfZvYvY="
+  "assetsHash": "sha256-RZGdHrsxHkA6klNK0Dtzox3iGdQ1Dgy6kwyI6Djnrk0="
 }
