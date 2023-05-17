@@ -19,6 +19,10 @@
 		<DefineConstants>$(DefineConstants);USE_THREADS</DefineConstants>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+		<WasmEnableWebcil>true</WasmEnableWebcil>
+	</PropertyGroup>
+
 	<Target Name="Note" BeforeTargets="Build">
 		<PropertyGroup>
 			<PrivWasmEnableThreadsMsg Condition="'$(WasmEnableThreads)' == 'true'">WasmEnableThreads enabled</PrivWasmEnableThreadsMsg>
