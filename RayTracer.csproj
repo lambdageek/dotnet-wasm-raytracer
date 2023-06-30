@@ -11,6 +11,7 @@
 		<RunAOTCompilation>true</RunAOTCompilation>
 		<WasmEnableSIMD>true</WasmEnableSIMD>
 		<WasmEnableExceptionHandling>true</WasmEnableExceptionHandling>
+                <WasmEnableThreads>true</WasmEnableThreads>
 	</PropertyGroup>
 	<ItemGroup>
 		<WasmExtraFilesToDeploy Include="main.js" />

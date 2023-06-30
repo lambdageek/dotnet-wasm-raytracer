@@ -11,8 +11,8 @@ echo "Running with commit $commit"
 
 rm -rf bin obj
 
-dotnet publish -p:WasmEnableThreads=true -c Release -f net8.0
-dotnet publish -p:WasmEnableThreads=true -c Release -f net7.0
+dotnet publish -c Release -f net8.0
+dotnet publish -c Release -f net7.0
 
 cp static-files-page/index.html bin/toplevel-index.html
 
