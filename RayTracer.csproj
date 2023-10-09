@@ -11,10 +11,11 @@
 		<RunAOTCompilation>true</RunAOTCompilation>
 		<WasmEnableSIMD>true</WasmEnableSIMD>
 		<WasmEnableExceptionHandling>true</WasmEnableExceptionHandling>
-                <WasmEnableThreads>true</WasmEnableThreads>
+		<WasmEnableThreads>true</WasmEnableThreads>
 	</PropertyGroup>
 	<ItemGroup>
 		<WasmExtraFilesToDeploy Include="main.js" />
+		<WasmExtraFilesToDeploy Include="dotnet.js" Conition="'$(TargetFramework)' != 'net7.0'"/>
 	</ItemGroup>
 	<PropertyGroup Condition="'$(WasmEnableThreads)' == 'true'">
 		<DefineConstants>$(DefineConstants);USE_THREADS</DefineConstants>
