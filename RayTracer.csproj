@@ -15,7 +15,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<WasmExtraFilesToDeploy Include="main.js" />
-		<WasmExtraFilesToDeploy Include="dotnet.js" Conition="'$(TargetFramework)' != 'net7.0'"/>
+		<WasmExtraFilesToDeploy Include="dotnet.js" Condition="'$(TargetFramework)' != 'net7.0'"/>
 	</ItemGroup>
 	<PropertyGroup Condition="'$(WasmEnableThreads)' == 'true'">
 		<DefineConstants>$(DefineConstants);USE_THREADS</DefineConstants>
