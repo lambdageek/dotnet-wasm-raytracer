@@ -58,10 +58,29 @@ public partial class MainJS
     static int totalFrames = 0;
     static double totalRenderTime = 0.0;
 
+    private static void AdjustStats(DateTime startTime, DateTime endTime, out string text)
+    {
+        const int DROP_FRAMES_FROM_STATS = 10;
+        var elapsedMs = (endTime - startTime).TotalMilliseconds;
+        totalFrames++;
+        // don't count the first couple of frames while we warmup
+        if (totalFrames > DROP_FRAMES_FROM_STATS)
+        {
+            totalRenderTime += elapsedMs;
+            var avgTime = totalRenderTime / (totalFrames - DROP_FRAMES_FROM_STATS);
+
+            text = $"Rendering finished in {elapsedMs:F2} ms; average time: {avgTime:F2} ms";
+        }
+        else
+        {
+            text = $"Rendering finished in {elapsedMs:F2} ms";
+        }
+    }
+
     [JSExport]
     [return: JSMarshalAs<JSType.Promise<JSType.Void>>]
     internal static async Task OnClick(){
-        var now = DateTime.UtcNow;
+        var startTime = DateTime.UtcNow;
         string text;
         text = "Rendering started";
 #if !USE_THREADS
@@ -71,13 +90,7 @@ public partial class MainJS
 
         await sceneEnvironment.Scene.Camera.RenderScene(sceneEnvironment.Scene, sceneEnvironment.rgbaRenderBuffer, sceneEnvironment.Width, sceneEnvironment.Height);
 
-        var elapsedMs = (DateTime.UtcNow - now).TotalMilliseconds;
-        totalFrames++;
-        totalRenderTime += elapsedMs;
-
-        var avgTime = totalRenderTime / totalFrames;
-
-        text = $"Rendering finished in {elapsedMs:F2} ms; average time: {avgTime:F2} ms";
+        AdjustStats(startTime, DateTime.UtcNow, out text);
 #if !USE_THREADS
         Console.WriteLine(text);
 #endif
