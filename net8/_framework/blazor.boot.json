@@ -1,109 +1,42 @@
 {
   "mainAssemblyName": "RayTracer.dll",
-  "assemblyRootFolder": "managed",
-  "debugLevel": 0,
-  "assets": [
-    {
-      "behavior": "dotnetwasm",
-      "name": "dotnet.native.wasm",
-      "hash": "sha256-Xpvg9M4Jx4aT9TVUkrQDbXqtHrKE\u002BsLcz53taAJgy3o="
+  "resources": {
+    "hash": "sha256-ypfLMEJ+f7wk9dRou5nClpg66sPclQo960xgQmWdRiM=",
+    "jsModuleWorker": {
+      "dotnet.native.worker.js": "sha256-Pt0TFMSK+s94JzGS7y7hs19aABsHrSevEPmb4BsDIOU="
     },
-    {
-      "behavior": "js-module-native",
-      "name": "dotnet.native.js",
-      "hash": "sha256-qJOWiC3TNErDU0nzPYpYwVUMmd7xG5ItDXzxWY3RgL0="
+    "jsModuleNative": {
+      "dotnet.native.js": "sha256-x2eujiCivJOf0EWtMRrtYT8DrPBeb/07Y1Dgx7hMkaw="
     },
-    {
-      "behavior": "js-module-threads",
-      "name": "dotnet.native.worker.js",
-      "hash": "sha256-Qx8CvNYlt1HAErxzLAM7CARKIDWzPQ7lN4FvTjY3vAg="
+    "jsModuleRuntime": {
+      "dotnet.runtime.js": "sha256-LiqNQQ/vmup8QUErKXG2jw7fUvbaO+di8IARBrvnsuY="
     },
-    {
-      "behavior": "js-module-dotnet",
-      "name": "dotnet.js",
-      "hash": "sha256-QX1\u002BVeBm7AaOP/NF5e4bvj6rlNg1lBC6J2F8Gs1L3Xg="
+    "wasmNative": {
+      "dotnet.native.wasm": "sha256-LHFDLuyeSBXfZfcBZMDu5jfrQHve5vKkfZIReCT4hkk="
     },
-    {
-      "behavior": "js-module-runtime",
-      "name": "dotnet.runtime.js",
-      "hash": "sha256-r2nYxvbJ3xWc3pSu875cmrL3ChjYEgVtO77bSWWZ30k="
+    "icu": {
+      "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
+      "icudt_EFIGS.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
+      "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
-    {
-      "behavior": "assembly",
-      "name": "RayTracer.wasm",
-      "hash": "sha256-qoOmsj5tONkM29Hk98U8aofEVLMqU7Bfd34f/Xyes2U="
+    "assembly": {
+      "RayTracer.wasm": "sha256-4+8axwU705YagHWJawqR2JUie7dKBq63HxaLzjRizxs=",
+      "System.ComponentModel.Primitives.wasm": "sha256-SbiXP7eu36iXfCp47uCdQgVAl2tpYqfiYDpKDBpAlT8=",
+      "System.ComponentModel.TypeConverter.wasm": "sha256-GCjVudAC25VkBhlcMl8O5+em5c+25pd51axkKVJDfmo=",
+      "System.Console.wasm": "sha256-zOvsYl6XGAZ+G/rh8StAXkMUTkZqPWE7+BmGzrbMnLw=",
+      "System.Drawing.wasm": "sha256-f0ldwyVzAUn/5GKD395YAeEsN8TnH2wBBTG2boGhSlA=",
+      "System.Drawing.Primitives.wasm": "sha256-+qBaFbOVu1m2VHDLnwo1Z6oB21Q0SOgqLx38KatwCJY=",
+      "System.ObjectModel.wasm": "sha256-xlYTphlzNRYsNyCHMEnJXnJeo2S+k6KIIQeKk7v8YPI=",
+      "System.Private.CoreLib.wasm": "sha256-Ca2J52KgasBpLjoq+nLUyex360T1URHMfui4T03xEHY=",
+      "System.Runtime.InteropServices.JavaScript.wasm": "sha256-sd+t9xPS5UPg4rD3R7ffYUiKIFc/cgLqR1jLDiy83bY=",
+      "System.Threading.Channels.wasm": "sha256-YaJZdmTY43mwwo8HmWAtCpgcSeZDBYu8HbqJI++7itU="
     },
-    {
-      "behavior": "assembly",
-      "name": "System.ComponentModel.Primitives.wasm",
-      "hash": "sha256-7lBj0rrdMs\u002B1c8vyJqOsx7Vo/H643mxxPqzda2rQoGc="
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.ComponentModel.TypeConverter.wasm",
-      "hash": "sha256-K/hYhOpUFqpaurChVR19i5S3u0GRbiAWsK9PvftQs6Y="
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.Console.wasm",
-      "hash": "sha256-ywCNB9VgR7q7otMV8fZd7DIO15WxGZTdxywhCOXzLuo="
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.Drawing.wasm",
-      "hash": "sha256-ZKF7HFgz4jbmXTu6IM1XClkOVZGinKJcNtaGdXvoQlk="
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.Drawing.Primitives.wasm",
-      "hash": "sha256-V8S0g3TGQvsyP1HvvYAQSVGroNE6vvmr\u002BDCsFYOWqYg="
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.ObjectModel.wasm",
-      "hash": "sha256-mTD84oDPzdT3X1lUnZXHhBMbMFFfxLsyVxl3CKY\u002BkiU="
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.Private.CoreLib.wasm",
-      "hash": "sha256-o8XOqhYcEbf1CwNJrrrCsg2U6cp0swN7dRKZx2G8yFY="
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.Runtime.InteropServices.JavaScript.wasm",
-      "hash": "sha256-XfQwJwIlcartW/nmA3IdXhtVwbWHv0qWf2Afv3lkBfM="
-    },
-    {
-      "behavior": "assembly",
-      "name": "System.Threading.Channels.wasm",
-      "hash": "sha256-5zfc65LfCGYqiZ6WowZTgfnKdj009F7\u002B\u002B8lDe3APyR0="
-    },
-    {
-      "virtualPath": "runtimeconfig.bin",
-      "behavior": "vfs",
-      "name": "supportFiles/0_runtimeconfig.bin",
-      "hash": "sha256-WOHR9nkKjrzc0Hi3xtw2XImVlGi8sNd7ePNLXD5oYlo="
-    },
-    {
-      "loadRemote": false,
-      "behavior": "icu",
-      "name": "icudt_CJK.dat",
-      "hash": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk="
-    },
-    {
-      "loadRemote": false,
-      "behavior": "icu",
-      "name": "icudt_EFIGS.dat",
-      "hash": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc="
-    },
-    {
-      "loadRemote": false,
-      "behavior": "icu",
-      "name": "icudt_no_CJK.dat",
-      "hash": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q\u002B0Nfs="
+    "vfs": {
+      "runtimeconfig.bin": {
+        "supportFiles/0_runtimeconfig.bin": "sha256-bZVADVE9/vuk4VK9UcMd3AREONFSoWULYacsy5DHL3I="
+      }
     }
-  ],
-  "remoteSources": [],
-  "globalizationMode": "icu",
-  "assetsHash": "sha256-V1Xo8Lnqm710fVgyKqGbpU94YP\u002B2mmI4Uu7ljHNPnOw="
+  },
+  "debugLevel": 0,
+  "globalizationMode": "sharded"
 }

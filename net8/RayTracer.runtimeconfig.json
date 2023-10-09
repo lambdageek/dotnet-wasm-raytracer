@@ -4,7 +4,7 @@
     "includedFrameworks": [
       {
         "name": "Microsoft.NETCore.App",
-        "version": "8.0.0-preview.6.23329.7"
+        "version": "8.0.0-rc.1.23470.11"
       }
     ],
     "wasmHostProperties": {
@@ -26,9 +26,11 @@
       "System.Runtime.InteropServices.BuiltInComInterop.IsSupported": false,
       "System.Runtime.InteropServices.EnableConsumingManagedCodeFromNativeHosting": false,
       "System.Runtime.InteropServices.EnableCppCLIHostActivation": false,
+      "System.Runtime.InteropServices.Marshalling.EnableGeneratedComInterfaceComImportInterop": false,
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,
       "System.StartupHookProvider.IsSupported": false,
       "System.Text.Encoding.EnableUnsafeUTF7Encoding": false,
+      "System.Text.Json.JsonSerializer.IsReflectionEnabledByDefault": false,
       "System.Threading.Thread.EnableAutoreleasePool": false
     }
   }
