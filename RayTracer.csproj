@@ -7,7 +7,7 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>preview</LangVersion>
 		<PublishTrimmed>true</PublishTrimmed>
-		<TrimMode>link</TrimMode>
+		<TrimMode>full</TrimMode>
 		<RunAOTCompilation>true</RunAOTCompilation>
 		<WasmEnableSIMD>true</WasmEnableSIMD>
 		<WasmEnableExceptionHandling>true</WasmEnableExceptionHandling>

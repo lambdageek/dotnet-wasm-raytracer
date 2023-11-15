@@ -1,7 +1,7 @@
 #! /bin/sh
 
 
-if [ "z$1" == "z" ]; then
+if [ "z$1" = "z" ] ; then
     framework="net7.0"
 fi
 framework=$1
