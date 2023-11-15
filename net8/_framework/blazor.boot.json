@@ -1,18 +1,18 @@
 {
   "mainAssemblyName": "RayTracer.dll",
   "resources": {
-    "hash": "sha256-ypfLMEJ+f7wk9dRou5nClpg66sPclQo960xgQmWdRiM=",
+    "hash": "sha256-+lKHS/hAyGArp/O9PRAkCqnATxcUxUqt0mhNeozCx9E=",
     "jsModuleWorker": {
-      "dotnet.native.worker.js": "sha256-Pt0TFMSK+s94JzGS7y7hs19aABsHrSevEPmb4BsDIOU="
+      "dotnet.native.worker.js": "sha256-Qx8CvNYlt1HAErxzLAM7CARKIDWzPQ7lN4FvTjY3vAg="
     },
     "jsModuleNative": {
-      "dotnet.native.js": "sha256-x2eujiCivJOf0EWtMRrtYT8DrPBeb/07Y1Dgx7hMkaw="
+      "dotnet.native.js": "sha256-lODtal1IhXr024pss+1UBxi3wHNvxoo2Iyr6vwStI2Y="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.js": "sha256-LiqNQQ/vmup8QUErKXG2jw7fUvbaO+di8IARBrvnsuY="
+      "dotnet.runtime.js": "sha256-YMShocpvWRStYYJ6FiyH2hCMQGVkJOzqzgFog4zjeJU="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-LHFDLuyeSBXfZfcBZMDu5jfrQHve5vKkfZIReCT4hkk="
+      "dotnet.native.wasm": "sha256-9eZASJ4AbmkMmqJEUXxvJNDIRsuP/VSQ/x4boyO/h6I="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -20,16 +20,16 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "RayTracer.wasm": "sha256-4+8axwU705YagHWJawqR2JUie7dKBq63HxaLzjRizxs=",
-      "System.ComponentModel.Primitives.wasm": "sha256-SbiXP7eu36iXfCp47uCdQgVAl2tpYqfiYDpKDBpAlT8=",
-      "System.ComponentModel.TypeConverter.wasm": "sha256-GCjVudAC25VkBhlcMl8O5+em5c+25pd51axkKVJDfmo=",
-      "System.Console.wasm": "sha256-zOvsYl6XGAZ+G/rh8StAXkMUTkZqPWE7+BmGzrbMnLw=",
-      "System.Drawing.wasm": "sha256-f0ldwyVzAUn/5GKD395YAeEsN8TnH2wBBTG2boGhSlA=",
-      "System.Drawing.Primitives.wasm": "sha256-+qBaFbOVu1m2VHDLnwo1Z6oB21Q0SOgqLx38KatwCJY=",
-      "System.ObjectModel.wasm": "sha256-xlYTphlzNRYsNyCHMEnJXnJeo2S+k6KIIQeKk7v8YPI=",
-      "System.Private.CoreLib.wasm": "sha256-Ca2J52KgasBpLjoq+nLUyex360T1URHMfui4T03xEHY=",
-      "System.Runtime.InteropServices.JavaScript.wasm": "sha256-sd+t9xPS5UPg4rD3R7ffYUiKIFc/cgLqR1jLDiy83bY=",
-      "System.Threading.Channels.wasm": "sha256-YaJZdmTY43mwwo8HmWAtCpgcSeZDBYu8HbqJI++7itU="
+      "RayTracer.wasm": "sha256-giPKs8qlBUlRlLJXfpovud6hgx0knhVW5s8mgqlX0n0=",
+      "System.ComponentModel.Primitives.wasm": "sha256-Szr82vCvE5p3y4pbO2uLvwcp8Zn55+Mlx120rO93/SE=",
+      "System.ComponentModel.TypeConverter.wasm": "sha256-uLUDitVJZdZVua0uLedZGBKAs99W6zkJv0eRfCDJY6s=",
+      "System.Console.wasm": "sha256-0vDxz7q/gL0EgKHL6DBeRiPfIWoTrv1vVPDLB81qEFY=",
+      "System.Drawing.wasm": "sha256-TrT2tTwYIWxq3X/Ri1LKCGDS+fwx17PfuRY/+vNw3Cs=",
+      "System.Drawing.Primitives.wasm": "sha256-HCeXW7RmojvAMlOKi9ONis9oebU6kXRXveVJiRg3Qu8=",
+      "System.ObjectModel.wasm": "sha256-rmVyPgYzPVoLh9eJno5BGGh1x5ujhKyDR2obDNFmDQA=",
+      "System.Private.CoreLib.wasm": "sha256-cF79uQhE9k/aCXdxYxVeqaiMmZb5gEG/V53zE68hWOg=",
+      "System.Runtime.InteropServices.JavaScript.wasm": "sha256-m827PcawoN7sH6p7ZtRiTrXsetLuTV3K/MgPbm842sw=",
+      "System.Threading.Channels.wasm": "sha256-0OwhtFEuuXi58YnxVQiJ1PPK2k0GY2zQSY1ejGqCXr0="
     },
     "vfs": {
       "runtimeconfig.bin": {
